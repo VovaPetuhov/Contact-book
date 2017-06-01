@@ -1,0 +1,11 @@
+#my_modal_runner, #button_for_api, #button_for_import {
+    margin: 10px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.add_input {
+    margin: 10px;
+}

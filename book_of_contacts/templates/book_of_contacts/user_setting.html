@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'adminlte/lib/_styles.html' %}
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="login-box-body">
+                {{ form_sett_pas.as_p }}
+                <button type="submit">Change</button>
+            </div>
+        </form>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="login-box-body">
+                {{ form_sett_api.as_p }}
+                <button type="submit">Change</button>
+            </div>
+        </form>
+        <p><a href="/">Home</a></p>
+    </div>
+</body>
+</html>
