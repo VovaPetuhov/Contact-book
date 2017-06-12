@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^login/$', auth_views.login),
     url(r'^logout/$', auth_views.logout),
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('book_of_contacts.urls')),
+    url(r'^', include('contact.apps.author.urls')),
+    url(r'^', include('contact.apps.core.urls')),
 ]

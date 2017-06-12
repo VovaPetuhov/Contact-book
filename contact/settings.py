@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django_adminlte',
     # Optional: Skin for the admin interface
     'django_adminlte_theme',
-    'book_of_contacts.apps.BookOfContactsConfig',
+    # 'book_of_contacts.apps.BookOfContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_modalview',
+    'contact.apps',
+    'contact.apps.core',
+    'contact.apps.author',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +85,7 @@ WSGI_APPLICATION = 'contact.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'book_of_contacts',
+        'NAME': 'contactsdb',
         'USER': 'root',
         'PASSWORD': '431790',
         'HOST': '127.0.0.1',
