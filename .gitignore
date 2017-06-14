@@ -1,4 +1,4 @@
-settings/development.py
+settings/contact/development.py
 .idea/*
 *.pyc
 *~
