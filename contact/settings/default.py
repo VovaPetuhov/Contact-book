@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django_adminlte',
     # Optional: Skin for the admin interface
     'django_adminlte_theme',
-    # 'book_of_contacts.apps.BookOfContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
