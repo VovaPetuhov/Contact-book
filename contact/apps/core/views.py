@@ -17,6 +17,7 @@ def add(request):
     first_name = data.get("first_name")
     last_name = data.get("last_name")
     country = data.get("country")
+    country_code = country[len(country)-2::]
     town = data.get("town")
     phone_nmb = data.get("phone_nmb")
     email = data.get("email")
@@ -24,7 +25,7 @@ def add(request):
     try:
         Contact.objects.update_or_create(first_name=first_name, last_name=last_name,
                                          user_id=contact_id,
-                                         defaults={'country': country, 'town': town,
+                                         defaults={'country': country_code, 'town': town,
                                                    'email': email, 'phone_nmb': phone_nmb})
     except ValueError:
         return_dict["description"] = "input_error"
@@ -166,7 +167,6 @@ def ajax_list_of_contacts(request):
 
     # --- View contacts of login user ---
     user_contacts = Contact.objects.filter(user_id=request.user.id).order_by('-created')
-    # user_contacts = Contact.objects.filter(username_id=request.user.id)
 
     # --- Views counts ---
     user_contacts_count = user_contacts.count()

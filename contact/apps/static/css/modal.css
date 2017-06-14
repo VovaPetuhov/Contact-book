@@ -9,3 +9,9 @@
 .add_input {
     margin: 10px;
 }
+
+.dropdown-menu {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

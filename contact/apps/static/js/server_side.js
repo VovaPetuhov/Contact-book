@@ -4,7 +4,7 @@ $(document).ready(function() {
     updateContacts();
     delete_row();
     send_contacts();
-    import_contacts()
+    import_contacts();
     });
 
 // Server-side processing for DataTable
@@ -157,3 +157,5 @@ function import_contacts() {
         });
     });
 }
+
+

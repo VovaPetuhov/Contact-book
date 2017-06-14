@@ -2,12 +2,24 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import View
+from django_countries.fields import Country
+
 from .forms import *
 from django.contrib.auth.models import User
-from ..core.models import Userdata
+from ..core.models import Userdata, Contact
+from django_countries import countries
 
 
 def home(request):
+    countries_list = list()
+    for code, name in list(countries):
+        country = Country("{code}".format(name=name, code=code))
+        country_dict = dict.fromkeys(['country_name', 'country_flag'])
+        country_dict['country_code'] = str("{code}".format(name=name, code=code))
+        country_dict['country_name'] = str(country.name)
+        country_dict['country_flag'] = str(country.flag)
+        countries_list.append(country_dict)
+
     return render(request, 'home.html', locals())
 
 

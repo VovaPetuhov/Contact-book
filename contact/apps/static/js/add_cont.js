@@ -7,7 +7,7 @@ form.on("submit", function (e) {
 
     var first_name = $('#number_first_name').val();
     var last_name = $('#number_last_name').val();
-    var country = $('#number_country').val();
+    var country = $('#country_select').val();
     var town = $('#number_town').val();
     var phone_nmb = $('#number_phone').val();
     var email = $('#number_email').val();
